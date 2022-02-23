@@ -1,18 +1,35 @@
-# include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+int main()
+{
+    int *p, x, *q;
+    int y = 6;
+    x = 100;
+    p = &x;
 
-  int *p;
+    *p = 800;
+    printf("%d\n", *p);
 
-  p = malloc(sizeof(int));
+    q = &x;
 
-  printf("Enter your number: ");
-  scanf("%d", &*p);
+    q = &y;
 
-  printf("You have enter: %d\n", *p);
+    p = q;
 
+    printf("%d\n%d\n%d", *q, *p, y);
 
 
     return 0;
 }
+
+//    int *p;
+
+//     p = malloc(sizeof(int));
+
+//     printf("Enter your number: ");
+//     scanf("%d", &*p);
+
+//     printf("You have enter: %d\n", *p);
+
+//     printf("Double of the number you enter is: %d\n", 2 * *p);
