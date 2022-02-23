@@ -3,9 +3,13 @@
 
 int main(){
 
-    int c = 36;
+    int size;
+    float *p;
 
-    printf("%d", &c);
+    printf("Enter how many numbers: ");
+    scanf("%d", &size);
+
+    p = malloc(size*sizeof(float));
 
 
 
