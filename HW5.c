@@ -3,13 +3,14 @@
 
 int main(){
 
-    int size;
-    float *p;
+  int *p;
 
-    printf("Enter how many numbers: ");
-    scanf("%d", &size);
+  p = malloc(sizeof(int));
 
-    p = malloc(size*sizeof(float));
+  printf("Enter your number: ");
+  scanf("%d", &*p);
+
+  printf("You have enter: %d\n", *p);
 
 
 
