@@ -3,8 +3,11 @@
 
 int main(){
 
-    printf("HomeWork Number 5");
-    
+    int c = 36;
+
+    printf("%d", &c);
+
+
 
     return 0;
 }
