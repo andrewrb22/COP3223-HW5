@@ -3,33 +3,17 @@
 
 int main()
 {
-    int *p, x, *q;
-    int y = 6;
-    x = 100;
-    p = &x;
 
-    *p = 800;
-    printf("%d\n", *p);
+    float *p;
 
-    q = &x;
+    p = malloc(sizeof(float));
 
-    q = &y;
+    printf("Enter your number: ");
+    scanf("%f", &*p);
 
-    p = q;
+    printf("You have enter: %.2f\n", *p);
 
-    printf("%d\n%d\n%d", *q, *p, y);
-
+    printf("Double of the number you enter is: %.2f\n", 2 * *p);
 
     return 0;
 }
-
-//    int *p;
-
-//     p = malloc(sizeof(int));
-
-//     printf("Enter your number: ");
-//     scanf("%d", &*p);
-
-//     printf("You have enter: %d\n", *p);
-
-//     printf("Double of the number you enter is: %d\n", 2 * *p);
