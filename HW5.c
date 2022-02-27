@@ -6,28 +6,37 @@ int main()
 
     float *p;
     float *q;
-    char *c;
+    char c;
 
 
-    p = malloc(sizeof(float));
-    c = malloc(sizeof(char));
-    q = malloc (sizeof(float));
+    p = malloc(sizeof(*p));
+    q = malloc (sizeof(*q));
 
     printf("Enter your two Integers:\n ");
     scanf("%f %f", &*p, &*q);
 
+    printf("Now, enter a or A to show the sum,\n p or P to show the product or \n d or D to show the division of the first by the second: ");
+    scanf(" %c",&c);
 
+// do
+// {
+    if (c == 'A' || c == 'a')
+    {
+        printf("\n %.2f + %.2f is = %.2f", *p , *q , *p + *q);
+    }
+    if(c == 'p' || c == 'P'){
+        Printf()
 
-
-
-    printf("Now, enter a or A to show the sum, p or P to show the product or d or D to show the division of the first by the second: \n");
-    scanf("%c", &*c);
+    }
     
 
-    // if (*c == 'a' || *c == 'A'){
-    //     printf("%f + %f  = %.2f", *p, *q, *p + *q);
-    // }
 
+
+    printf("\n \t Goodbye \n"); 
+    
+
+
+// } while ( c == 'A' || c == 'a');
 
 
 
