@@ -6,7 +6,7 @@ int main()
 
     float *p;
     float *q;
-    char c;
+    char options;
 
 
     p = malloc(sizeof(*p));
@@ -16,21 +16,30 @@ int main()
     scanf("%f %f", &*p, &*q);
 
     printf("Now, enter the following options:\na or A to show the sum\np or P to show the product\nd or D to show the division of the first by the second: ");
-    scanf(" %c",&c);
+    scanf(" %c",&options);
 
-// do
-// {
-    if (c == 'A' || c == 'a')
-    {
-        printf("\n %.2f + %.2f is = %.2f\n", *p , *q , *p + *q);
-    }
-    if(c == 'p' || c == 'P'){
-        printf("\n %.2f * %.2f = %.2f\n", *p, *q, *p * *q);
+switch (options)
+{
+case 'A':
+    printf("\n %.2f + %.2f is = %.2f\n", *p , *q , *p + *q);
+    break;
 
-    }
-    if( c== 'D' || c == 'd'){
-        printf("%.2f / %.2f = %.2f\n", *p, *q, *p / *q);
-    }
+case 'a':
+    printf("\n %.2f + %.2f is = %.2f\n", *p , *q , *p + *q);
+    break;
+    case 'P':
+    printf("\n %.2f * %.2f = %.2f\n", *p, *q, *p * *q);
+    break;
+
+case 'p':
+    printf("\n %.2f * %.2f = %.2f\n", *p, *q, *p * *q);
+    break;
+}
+    
+    // }
+    // if( options == 'D' || options == 'd'){
+    //     printf("%.2f / %.2f = %.2f\n", *p, *q, *p / *q);
+    // }
     
 
 
@@ -39,10 +48,9 @@ int main()
     
 
 
-// } while ( c == 'A' || c == 'a');
+
 
 
 
     return 0;
 }
-// printf("You have enter: %.2f\n", *p);
